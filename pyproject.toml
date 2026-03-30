@@ -1,0 +1,11 @@
+[project]
+name = "le-wm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "datasets>=4.8.4",
+    "dotenv>=0.9.9",
+    "stable-worldmodel>=0.0.6",
+]

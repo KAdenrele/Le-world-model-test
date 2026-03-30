@@ -1,0 +1,6 @@
+.env
+.venv
+assets/
+downloads/
+stable-wm/
+.python-version
