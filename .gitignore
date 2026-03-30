@@ -1,8 +1,6 @@
 .env
 .venv
 assets/
-downloads/*
-#But do NOT ignore the specific script
-!downloads/download_tars.py
+downloads/
 stable-wm/
 .python-version

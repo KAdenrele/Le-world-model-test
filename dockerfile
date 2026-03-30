@@ -4,7 +4,7 @@ COPY pyproject.toml .
 RUN uv pip install --system .
 VOLUME /Users/akomolafe/Documents/le-wm/stable-wm:/app/stable-wm
 ENV STABLEWM_HOME=/app/stable-wm
-COPY downloads/download_tars.py .
+COPY download_tars.py .
 COPY eval.py .
 COPY train.py .
 COPY utils.py .
