@@ -4,6 +4,7 @@ COPY pyproject.toml .
 RUN uv pip install --system .
 VOLUME /Users/akomolafe/Documents/le-wm/stable-wm:/app/stable-wm
 ENV STABLEWM_HOME=/app/stable-wm
+COPY downloads/download_tars.py .
 COPY eval.py .
 COPY train.py .
 COPY utils.py .
@@ -12,4 +13,4 @@ COPY module.py .
 COPY config/ .
 VOLUME ["/app/files"]
 
-CMD ["sh", "-c", "uv run downloads/download_tars.py && uv run train.py data=pusht"]
+CMD ["sh", "-c", "uv run download_tars.py && uv run train.py data=pusht"]
