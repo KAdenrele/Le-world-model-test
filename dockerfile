@@ -14,6 +14,7 @@ COPY utils.py .
 COPY jepa.py .
 COPY module.py .
 COPY config/ .
+COPY main.py .
 VOLUME ["/app/files"]
 
 CMD ["uv", "run", "main.py"]
