@@ -62,8 +62,3 @@ loss:
     kwargs:
       knots: 17
       num_proj: 1024
-
-wandb:
-  config:
-    entity: test_entity
-    project: test_project
