@@ -1,0 +1,12 @@
+.env
+.venv
+assets/
+downloads/
+stable-wm/
+.python-version
+.dockerignore
+build_and_run_conotainer.sh
+dockerfile
+LICENSE
+README.md
+uv.lock

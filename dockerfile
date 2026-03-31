@@ -8,13 +8,7 @@ COPY pyproject.toml .
 RUN uv pip install --system .
 ENV STABLEWM_HOME=/app/stable-wm
 COPY download_tars.py .
-COPY eval.py .
-COPY train.py .
-COPY utils.py .
-COPY jepa.py .
-COPY module.py .
-COPY config/ .
-COPY main.py .
+COPY . .
 VOLUME ["/app/files"]
 
 CMD ["uv", "run", "main.py"]
