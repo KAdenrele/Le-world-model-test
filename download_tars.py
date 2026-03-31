@@ -2,6 +2,7 @@ import os
 import subprocess
 from huggingface_hub import hf_hub_download, list_repo_files
 from dotenv import load_dotenv
+import shutil
 
 load_dotenv()
 HF_TOKEN = os.getenv("HF_TOKEN")
@@ -54,5 +55,5 @@ for repo_id in datasets_repos:
     except Exception as e:
         print(f"An error occurred while processing {repo_id}: {e}")
         
-os.rmdir(DOWNLOAD_DIR)
+shutil.rmtree(DOWNLOAD_DIR)
 print("All datasets have been processed.")
