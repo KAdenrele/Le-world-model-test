@@ -10,4 +10,4 @@ COPY . .
 VOLUME ["/app/files"]
 ENV STABLEWM_HOME=/app/files
 ENV HYDRA_FULL_ERROR=1
-CMD ["uv", "run", "main.py"]
+CMD ["python", "main.py"]
