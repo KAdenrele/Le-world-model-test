@@ -124,12 +124,12 @@ def run(cfg):
     )
 
     optimizers = {
-        "model_opt": {
-            **dict(cfg.optimizer), # Unpack lr, weight_decay, etc.
-            "modules": "model",    # MUST be a string (regex), not a list
+        'model_opt': {
+            "modules": 'model',
+            "optimizer": dict(cfg.optimizer),
             "scheduler": {"type": "LinearWarmupCosineAnnealingLR"},
             "interval": "epoch",
-        }
+        },
     }
 
     data_module = spt.data.DataModule(train=train, val=val)
