@@ -13,8 +13,8 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 COPY pyproject.toml .
 
-RUN uv pip install 'stable-worldmodel[train,env]' 
-#&& \ uv pip install .
+RUN uv pip install 'stable-worldmodel[train,env]'  && \ 
+uv pip install .
 
 
 COPY . .

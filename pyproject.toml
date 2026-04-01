@@ -5,8 +5,5 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "datasets>=4.8.4",
-    "dotenv>=0.9.9",
-    "stable-pretraining>=0.1.4",
-    "stable-worldmodel[env,train]>=0.0.6",
+    "datasets>=4.0.0",
 ]
