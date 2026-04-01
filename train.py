@@ -124,9 +124,9 @@ def run(cfg):
     )
 
     optimizers = {
-        "model": {
-            **dict(cfg.optimizer), # Unpack the actual optimizer args (lr, weight_decay, etc.)
-            "modules": ["model"],   # This tells the library which part of the module to optimize
+        "model_opt": {
+            **dict(cfg.optimizer), # Unpack lr, weight_decay, etc.
+            "modules": "model",    # MUST be a string (regex), not a list
             "scheduler": {"type": "LinearWarmupCosineAnnealingLR"},
             "interval": "epoch",
         }
