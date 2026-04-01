@@ -124,12 +124,12 @@ def run(cfg):
     )
 
     optimizers = {
-        "optimizer": {
-            "modules": 'model',
-            "optimizer": dict(cfg.optimizer),
+        "model": {
+            **dict(cfg.optimizer), # Unpack the actual optimizer args (lr, weight_decay, etc.)
+            "modules": ["model"],   # This tells the library which part of the module to optimize
             "scheduler": {"type": "LinearWarmupCosineAnnealingLR"},
             "interval": "epoch",
-        },
+        }
     }
 
     data_module = spt.data.DataModule(train=train, val=val)
