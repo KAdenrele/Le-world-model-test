@@ -124,11 +124,13 @@ def run(cfg):
     )
 
     optimizers = {
+        'model_opt': {
             "modules": 'model',
             "optimizer": dict(cfg.optimizer),
             "scheduler": {"type": "LinearWarmupCosineAnnealingLR"},
             "interval": "epoch",
         },
+    }
 
     data_module = spt.data.DataModule(train=train, val=val)
     world_model = spt.Module(
