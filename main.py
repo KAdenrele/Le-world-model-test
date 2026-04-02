@@ -17,7 +17,7 @@ def main():
         sys.exit(1)
 
     logger.info("Starting evaluation process.")
-    eval_command = ["python", "eval.py", "--config-name=pusht", "policy=pusht/lewm"]
+    eval_command = ["python", "eval.py", "--config-name=pusht", "policy=pusht/lewm_epoch_11"]
     try:
         subprocess.run(eval_command, check=True)
         logger.info("Evaluation process completed.")
